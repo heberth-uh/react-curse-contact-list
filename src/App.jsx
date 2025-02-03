@@ -1,16 +1,17 @@
-import ContactList from './components/ContactList'
-import ContactForm from './components/ContactForm'
+import ContactList from "./components/ContactList";
+import ContactForm from "./components/ContactForm";
+import Footer from "./components/Footer";
 
 function App() {
-
   return (
-    <div className="bg-zinc-900 h-screen">
-      <div className='container mx-auto p-10'>
-        <ContactForm/>
-        <ContactList/>
+    <div className="container mx-auto p-10 flex flex-col justify-between min-h-screen">
+      <div>
+        <ContactForm />
+        <ContactList />
       </div>
+      <Footer />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

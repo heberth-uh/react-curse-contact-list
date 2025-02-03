@@ -28,26 +28,28 @@ export default function ContactForn() {
 	return (
 		<form onSubmit={handleSubmit} className='bg-zinc-800 my-5 rounded-md p-5'>
 			<h2 className="text-xl text-gray-300 font-semibold mb-3">Agregar contacto</h2>
-			<input
-				className="w-full mb-3 bg-zinc-600 p-3 text-gray-200 text-lg font-semibold rounded outline-none"
-				placeholder='Nombre del contacto'
-				onChange={(e) => setName(e.target.value)}
-				value={name}
-				autoFocus required
-			/>
-			<input
-			className="w-full mb-3 bg-zinc-600 p-3 text-gray-300 rounded appearance-none outline-none"
-				placeholder="Teléfono"
-				onChange={(e) => handleChangePhone(e)}
-				value={phone} required
-			/>
-			<input
-			className="w-full mb-3 bg-zinc-600 p-3 text-gray-300 rounded appearance-none outline-none"
-				placeholder="Email"
-				type="email"
-				onChange={(e) => setEmail(e.target.value)}
-				value={email} required
-			/>
+			<div className="grid grid-cols-1 gap-x-4 md:grid-cols-3">
+				<input
+					className="w-full mb-3 bg-zinc-600 p-3 text-gray-200 font-semibold rounded outline-none"
+					placeholder='Nombre del contacto'
+					onChange={(e) => setName(e.target.value)}
+					value={name}
+					autoFocus required
+				/>
+				<input
+				className="w-full mb-3 bg-zinc-600 p-3 text-gray-300 rounded appearance-none outline-none"
+					placeholder="Teléfono"
+					onChange={(e) => handleChangePhone(e)}
+					value={phone} required
+				/>
+				<input
+				className="w-full mb-3 bg-zinc-600 p-3 text-gray-300 rounded appearance-none outline-none"
+					placeholder="Email"
+					type="mail"
+					onChange={(e) => setEmail(e.target.value)}
+					value={email} required
+				/>
+			</div>
 			<button className="bg-gray-300 text-gray-800 hover:bg-gray-600 hover:text-gray-200 px-2 py-1 rounded">
 				Guardar
 			</button>

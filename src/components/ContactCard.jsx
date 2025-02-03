@@ -10,7 +10,7 @@ function ContactCard({ contact }) {
     }
 
     return (
-        <div className="bg-gray-700 text-white p-4 rounded-md" >
+        <div className="bg-gray-700 text-white p-4 rounded-md">
             <h2 className="text-lg font-bold capitalizes">{contact.name}</h2>
             <p className="text-gray-400 text-sm">{contact.phone}</p>
             <p className="text-gray-400 text-sm">{contact.email}</p>
