@@ -11,18 +11,18 @@ export function ContactContextProvider( props ) {
     setContacts(data)
   }, [])
 
-  function createContact(name, phone) {
+  function createContact(name, phone, email) {
     const newContact = {
       'id': contacts.length + 1,
       name,
-      phone
+      phone,
+      email
     } 
     setContacts([...contacts, newContact])
   }
 
   function deleteContact(id) {
     const updateContacts = contacts.filter(t => t.id != id)
-    console.log(id, updateContacts)
     setContacts(updateContacts)
   }
 

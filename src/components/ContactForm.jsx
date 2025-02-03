@@ -6,12 +6,14 @@ export default function ContactForn() {
 	const { createContact } = useContext(ContactContext)
 	const [name, setName] = useState("")
 	const [phone, setPhone] = useState("")
+	const [email, setEmail] = useState("")
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
-		createContact(name, phone)
+		createContact(name, phone, email)
 		setName('')
 		setPhone('')
+		setEmail('')
 	}
 
 	const handleChangePhone = e => {
@@ -38,6 +40,13 @@ export default function ContactForn() {
 				placeholder="Teléfono"
 				onChange={(e) => handleChangePhone(e)}
 				value={phone} required
+			/>
+			<input
+			className="w-full mb-3 bg-zinc-600 p-3 text-gray-300 rounded appearance-none outline-none"
+				placeholder="Email"
+				type="email"
+				onChange={(e) => setEmail(e.target.value)}
+				value={email} required
 			/>
 			<button className="bg-gray-300 text-gray-800 hover:bg-gray-600 hover:text-gray-200 px-2 py-1 rounded">
 				Guardar
